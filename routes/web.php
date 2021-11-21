@@ -13,4 +13,10 @@
 |
 */
 
-$router->post('/api/v1/submitForm', 'LeadsController@store');
+$router->post(
+    '/api/v1/submitForm',
+    [
+        'middleware' => 'throttle:5',
+        'uses' => 'LeadsController@store',
+    ]
+);
