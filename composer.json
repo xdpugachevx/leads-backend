@@ -1,0 +1,18 @@
+{
+    "require": {
+        "php": "^8.0",
+        "irazasyed/telegram-bot-sdk": "^3.4",
+        "laravel/lumen-framework": "^8.3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
