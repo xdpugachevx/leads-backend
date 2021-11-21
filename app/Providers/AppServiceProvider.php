@@ -16,7 +16,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(LeadsStore::class, TelegramBotLeadStore::class);
+        $this->app->singleton(
+            LeadsStore::class,
+            env('LEAD_STORE_CLASS') ?: TelegramBotLeadStore::class
+        );
 
         $this->app->when(Api::class)
             ->needs('$token')
