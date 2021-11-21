@@ -2,7 +2,7 @@ version: '3'
 
 services:
   php:
-    build: './docker/php'
+    build: './docker/php/development'
     user: '1000:1000'
     volumes: [ './:/app' ]
     working_dir: '/app'
