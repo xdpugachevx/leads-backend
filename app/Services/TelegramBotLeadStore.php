@@ -16,9 +16,8 @@ class TelegramBotLeadStore implements LeadsStore
         $this->telegramBotApi->sendMessage(
             [
                 'chat_id' => $this->telegramChatId,
-                'parse_mode' => 'MarkdownV2',
                 'text' => sprintf(
-                    "*Telegram:* @%s\n*About:* %s",
+                    "Telegram: @%s\nAbout: %s",
                     $telegram,
                     $about
                 )
